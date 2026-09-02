@@ -42,7 +42,7 @@ export const copy = {
         "Offline progress: your empire keeps spinning while you sleep",
       ],
       galleryHeading: "Screenshots",
-      captions: ["You start with nothing", "Merge and evolve", "Choose your career", "Become the property king", "Reach God (literally)", "Survive the economy"],
+      captions: ["You start with nothing", "Meet the special characters", "Choose your career", "Open chests, unlock looks", "Come back for the daily reward", "Reincarnate and start over, faster"],
       sheetHeading: "Fact sheet",
       sheet: [
         ["Genre", "merge / idle"], ["Platform", "iOS 17 or later"], ["Price", "Free, with in-app purchases"],
@@ -129,7 +129,7 @@ export const copy = {
         "Jugá offline: tu imperio sigue girando mientras dormís",
       ],
       galleryHeading: "Capturas",
-      captions: ["Arrancás de fisura", "Fusioná y evolucioná", "Elegí tu destino (con título)", "Hacete el rey del ladrillo", "Llegá a Dios (literal)", "Sobreviví a la economía"],
+      captions: ["Arrancás de fisura", "Cruzate con los personajes especiales", "Elegí tu destino (con título)", "Abrí cofres y ganá pintas", "Volvé por el regalo diario", "Reencarná y arrancá más rápido"],
       sheetHeading: "Ficha técnica",
       sheet: [
         ["Género", "merge / idle"], ["Plataforma", "iOS 17 o posterior"], ["Precio", "Gratis, con compras dentro de la app"],
