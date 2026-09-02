@@ -28,6 +28,15 @@ export function GamePage({ lang }: { lang: Lang }) {
           </div>
         </div>
       </section>
+      <section className="mx-auto max-w-5xl px-6 pt-12">
+        <Image
+          src="/fisuevolution/keyart.png"
+          alt=""
+          width={1600}
+          height={900}
+          className="h-auto w-full rounded-2xl border-[3px] border-tinta shadow-[0_4px_0_#2C2C2C]"
+        />
+      </section>
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="mb-8 text-2xl sm:text-3xl">{t.featuresHeading}</h2>
         <ul className="m-0 grid list-none gap-4 p-0 sm:grid-cols-2 lg:grid-cols-3">
@@ -44,7 +53,7 @@ export function GamePage({ lang }: { lang: Lang }) {
       </section>
       <section className="mx-auto max-w-5xl px-6 pb-16">
         <h2 className="mb-8 text-2xl sm:text-3xl">{t.galleryHeading}</h2>
-        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3 lg:grid-cols-6">
+        <div className="grid grid-cols-2 gap-5 sm:grid-cols-3">
           {t.captions.map((cap, i) => (
             <figure key={cap} className="m-0 flex flex-col gap-2">
               <div className="overflow-hidden rounded-[1.4rem] border-[3px] border-tinta bg-ink p-1 shadow-[0_4px_0_#2C2C2C]">

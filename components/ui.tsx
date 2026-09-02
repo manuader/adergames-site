@@ -14,7 +14,7 @@ export function Header({ lang, route }: { lang: Lang; route: string }) {
     <header className="bg-ink">
       <div className="mx-auto flex max-w-5xl items-center justify-between gap-6 px-6 py-4">
         <Link href={href(lang, "/")} className="shrink-0">
-          <Image src="/brand/logo.png" alt="Ader Games" width={96} height={96} className="h-10 w-10 object-cover" priority />
+          <Image src="/brand/logo.png" alt="Ader Games" width={96} height={96} className="h-10 w-10 object-cover" priority unoptimized />
         </Link>
         <nav aria-label="Main" className="flex items-center gap-5 sm:gap-7">
           {items.map(([label, r]) => (
