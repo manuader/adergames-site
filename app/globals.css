@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-cream text-tinta font-body antialiased; }
+  h1, h2, h3 { @apply font-display uppercase tracking-tight leading-tight font-normal; }
+  a { @apply text-azul; }
+  a:hover { @apply text-naranja; }
+  :focus-visible { outline: 3px solid #FF6B35; outline-offset: 2px; border-radius: 2px; }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
+}
+@media print {
+  header, footer, .toc { display: none !important; }
+  body { background: #fff; }
+}

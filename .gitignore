@@ -1,0 +1,13 @@
+node_modules
+.next
+out
+.vercel
+*.tsbuildinfo
+
+# macOS
+.DS_Store
+
+# variables de entorno
+.env
+.env.*
+!.env.example
