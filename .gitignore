@@ -11,3 +11,6 @@ out
 .env
 .env.*
 !.env.example
+
+# lo regenera Next en cada build (alterna dev/prod y ensucia el diff)
+next-env.d.ts
