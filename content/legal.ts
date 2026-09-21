@@ -8,35 +8,88 @@ export type LegalDoc = { title: string; updated: string; summary: string; sectio
 
 export const privacyES: LegalDoc = {
   title: "Política de Privacidad — FisuEvolution",
-  updated: "julio 2026",
-  summary: "Resumen honesto: no recolectamos tus datos.",
+  updated: "septiembre de 2026",
+  summary: "Resumen honesto: nosotros no recolectamos tus datos. La publicidad sí procesa algunos, y abajo está exactamente cuáles y cómo los controlás.",
   sections: [
-    { id: "datos", title: "Qué datos hay (y dónde viven)", blocks: [
+    { id: "no-hacemos", title: "Lo que NO hacemos", blocks: [
       { list: [
-        "**Tu progreso de juego** se guarda en tu dispositivo y, si activás iCloud, en **tu** base de datos privada de iCloud — a la que nosotros no tenemos acceso.",
-        "**No hay cuentas, no hay registro**, no pedimos email ni datos personales.",
-        "**Game Center** (rankings y logros) es opcional y lo gestiona Apple según su propia política de privacidad.",
-        "**Compras**: las procesa Apple (App Store). No vemos ni guardamos datos de pago.",
-        "**Anuncios**: si la versión instalada muestra anuncios recompensados, el proveedor de anuncios (Google AdMob) puede procesar identificadores del dispositivo según tu elección en el diálogo de permiso de rastreo de iOS (App Tracking Transparency). Si rechazás el permiso, los anuncios se sirven sin personalizar. Podés eliminar los anuncios con la compra \"Sin anuncios\".",
-        "**No vendemos datos** a terceros. No hay analytics de terceros.",
+        "**No tenemos cuentas ni registro.** No pedimos tu email, tu nombre ni ningún dato personal para jugar.",
+        "**No tenemos servidores propios ni analytics de terceros.** Tu progreso se guarda en tu dispositivo.",
+        "**No vendemos datos** a nadie.",
       ]},
     ]},
+    { id: "publicidad", title: "Publicidad", blocks: [
+      { p: "FisuEvolution **muestra publicidad de Google AdMob**. Hay dos tipos:" },
+      { list: [
+        "**Videos con recompensa**, que mirás sólo si querés: los ofrecemos a cambio de premios dentro del juego (duplicar tus ganancias, abrir otro cofre, activar un boost). Nunca se reproducen solos.",
+        "**Anuncios de pantalla completa** entre partes del juego, espaciados y nunca en medio de una acción. La compra **\"Sin anuncios\"** los elimina; los videos con recompensa siguen disponibles, porque son opcionales y entregan premios.",
+      ]},
+      { p: "Para mostrarlos, **Google AdMob procesa datos de tu dispositivo** —incluido tu identificador de publicidad (IDFA), la dirección IP y datos técnicos y de uso— según su propia política de privacidad: https://policies.google.com/privacy" },
+    ]},
+    { id: "control", title: "Vos controlás si es personalizada", blocks: [
+      { p: "La primera vez que abrís el juego, iOS te muestra el diálogo de **App Tracking Transparency** preguntando si permitís el seguimiento." },
+      { list: [
+        "**Si aceptás**, los anuncios se personalizan usando tu identificador de publicidad.",
+        "**Si rechazás**, **los anuncios se siguen viendo igual, sólo que sin personalizar**. No perdés nada del juego.",
+      ]},
+      { p: "Podés cambiar esta decisión cuando quieras en **Ajustes → Privacidad y seguridad → Rastreo**." },
+      { p: "En la Unión Europea, el Reino Unido y Suiza, además te mostramos el formulario de consentimiento de Google (UMP) antes de servir cualquier anuncio, y podés revisar tu elección desde los ajustes del juego." },
+    ]},
+    { id: "compras", title: "Compras dentro de la app", blocks: [
+      { p: "Las procesa **Apple**. Nosotros no vemos ni guardamos datos de tu tarjeta ni de tu método de pago — sólo recibimos de Apple la confirmación de qué compraste, para entregártelo." },
+    ]},
+    { id: "progreso", title: "Tu progreso de juego", blocks: [
+      { p: "Se guarda **en tu dispositivo**. Si en alguna versión futura activamos el guardado en iCloud, iría a **tu** base de datos privada de iCloud, a la que no tenemos acceso, y lo diríamos acá antes de hacerlo." },
+    ]},
+    { id: "menores", title: "Menores", blocks: [
+      { p: "El juego tiene clasificación 12+ y no está dirigido a menores de 13 años. No recolectamos a sabiendas datos de menores de esa edad." },
+    ]},
     { id: "contacto", title: "Contacto", blocks: [
-      { p: "Consultas de privacidad: {SUPPORT_EMAIL}" },
+      { p: "Cualquier consulta sobre privacidad: {SUPPORT_EMAIL}" },
     ]},
   ],
 };
 
 export const privacyEN: LegalDoc = {
-  title: "Privacy Policy — FisuEvolution",
-  updated: "July 2026",
-  summary: "Honest summary: we don't collect your data.",
+  title: "Privacy Policy — HoboEvolution",
+  updated: "September 2026",
+  summary: "Honest summary: we don't collect your data. The ads do process some, and below is exactly which and how you control them.",
   sections: [
-    { id: "data", title: "What data exists (and where it lives)", blocks: [
-      { p: "Game progress lives on your device and (optionally) in **your** private iCloud database, which we cannot access. No accounts, no sign-up. Game Center is optional and operated by Apple. Purchases are processed by Apple. If the installed version shows rewarded ads, Google AdMob may process device identifiers according to your iOS App Tracking Transparency choice; declining serves non-personalized ads. We never sell data." },
+    { id: "dont", title: "What we do NOT do", blocks: [
+      { list: [
+        "**No accounts, no sign-up.** We never ask for your email, your name or any personal data to play.",
+        "**No servers of our own and no third-party analytics.** Your progress stays on your device.",
+        "**We never sell data** to anyone.",
+      ]},
+    ]},
+    { id: "ads", title: "Advertising", blocks: [
+      { p: "HoboEvolution **shows Google AdMob ads**. There are two kinds:" },
+      { list: [
+        "**Opt-in rewarded videos** you choose to watch for in-game prizes (double your earnings, open another chest, activate a boost). They never play on their own.",
+        "**Full-screen ads** between parts of the game, spaced out and never in the middle of an action. The **\"No Ads\"** purchase removes them; rewarded videos stay, since they are optional and pay out.",
+      ]},
+      { p: "To serve them, **Google AdMob processes device data** — including your advertising identifier (IDFA), IP address and technical/usage data — under its own privacy policy: https://policies.google.com/privacy" },
+    ]},
+    { id: "control", title: "You control whether ads are personalized", blocks: [
+      { p: "On first launch, iOS shows you the **App Tracking Transparency** prompt asking whether you allow tracking." },
+      { list: [
+        "**If you accept**, ads are personalized using your advertising identifier.",
+        "**If you decline**, **you still get ads, just non-personalized**. You lose nothing in the game.",
+      ]},
+      { p: "You can change this any time in **Settings → Privacy & Security → Tracking**." },
+      { p: "In the EU, the UK and Switzerland we also show Google's consent form (UMP) before serving any ad, and you can review your choice from the game's settings." },
+    ]},
+    { id: "purchases", title: "In-app purchases", blocks: [
+      { p: "Handled by **Apple**. We never see or store your card or payment details — Apple only tells us what you bought, so we can deliver it." },
+    ]},
+    { id: "progress", title: "Your game progress", blocks: [
+      { p: "It stays **on your device**. If a future version enables iCloud saving, it would go to **your** private iCloud database, which we cannot access, and we would say so here before doing it." },
+    ]},
+    { id: "minors", title: "Minors", blocks: [
+      { p: "The game is rated 12+ and is not directed at children under 13. We do not knowingly collect data from children under that age." },
     ]},
     { id: "contact", title: "Contact", blocks: [
-      { p: "Privacy questions: {SUPPORT_EMAIL}" },
+      { p: "Any privacy question: {SUPPORT_EMAIL}" },
     ]},
   ],
 };
