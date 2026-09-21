@@ -1,4 +1,4 @@
-# adergames.io
+# adergames-site
 
 Sitio estático de Ader Games — Next.js (App Router) + TypeScript + Tailwind. Sin backend, sin analytics, sin cookies, sin requests a terceros en runtime (tipografías self-hosted vía `next/font`).
 
@@ -12,12 +12,22 @@ npm run build      # build de producción
 ## Deploy en Vercel
 Importar el repo en Vercel — cero configuración. `npm install && npm run build` pasa limpio.
 
-## Completar antes de publicar (una sola vez, un solo archivo)
-`content/site.ts` — los valores `"TODO"`:
-- `legalName` — razón social completa (p. ej. "Ader Games S.A.S."). También reemplaza la frase del sujeto legal en /terms.
-- `taxId` — CUIT.
-- `address` — domicilio legal completo.
-- Confirmar `domain` (hoy: adergames.io) y los emails.
+## Datos del sitio — un solo archivo
+Todo vive en `content/site.ts`. Estado al 2026-09-21:
+
+| Campo | Valor | Por qué |
+|---|---|---|
+| `legalName` | `Manuel Ader` | Se publica como **persona física**, que es lo que dicen los términos y lo que es el enrollment Individual de App Store. Cuando ADERGAMES S.A.S. esté inscripta, acá va la razón social — y también cambia sola la frase del sujeto legal en `/terms`. |
+| `taxId` | **vacío** | Sin CUIT publicado. La fila de `/about` se oculta sola cuando el valor está vacío; poner uno inventado sería peor que no tenerlo. |
+| `domain` | `adergames-site.vercel.app` | De acá salen canonical, sitemap, robots y JSON-LD: tiene que resolver. |
+| los tres emails | `adermanu@gmail.com` | Ver abajo. |
+
+⚠️ **`adergames.io` no está registrado.** El registro de `.io` devuelve
+`Domain not found` y no hay MX, A ni NS. Los tres mails que había antes
+(`support@`, `contact@`, `press@`) **rebotaban**, y App Store Review pide
+contacto vigente en el support URL (guideline 1.5). Si algún día se compra el
+dominio y se le pone buzón, se cambian esas cinco líneas y listo.
+
 Cuando el juego salga: `releaseState: "released"` + `appStoreUrl`.
 
 ## Archivos de /public a reemplazar por assets reales

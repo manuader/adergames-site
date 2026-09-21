@@ -4,12 +4,15 @@ import { OrgJsonLd } from "@/components/JsonLd";
 
 export function AboutPage({ lang }: { lang: Lang }) {
   const t = copy[lang].about;
-  const rows: [string, string][] = [
+  // Las filas sin valor no se muestran: hoy el CUIT está vacío a propósito
+  // (ver content/site.ts) y una fila con "TODO" o en blanco queda peor que
+  // ninguna fila.
+  const rows: [string, string][] = ([
     [t.companyRows.legalName, site.legalName],
     [t.companyRows.taxId, site.taxId],
     [t.companyRows.address, site.address],
     [t.companyRows.email, site.contactEmail],
-  ];
+  ] as [string, string][]).filter(([, v]) => v);
   return (
     <div className="mx-auto max-w-3xl px-6 py-14">
       <OrgJsonLd />
