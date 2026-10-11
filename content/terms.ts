@@ -2,7 +2,7 @@ import type { LegalDoc } from "./legal";
 
 export const termsES: LegalDoc = {
   title: "Términos de Servicio — FisuEvolution",
-  updated: "16 de agosto de 2026",
+  updated: "6 de octubre de 2026",
   summary: "Resumen honesto: es un juego. Es gratis. Si comprás algo, lo cobra Apple y lo que comprás son objetos de un juego, no plata de verdad.",
   sections: [
     { id: "aceptacion", title: "1. Aceptación", blocks: [
@@ -28,11 +28,20 @@ export const termsES: LegalDoc = {
       ]},
     ]},
     { id: "anuncios", title: "4. Anuncios", blocks: [
-      { p: "Si la versión instalada muestra anuncios recompensados, mirarlos es siempre **opcional**: sirven para conseguir bonus temporales y nunca son obligatorios para avanzar. Podés eliminarlos con la compra \"Sin anuncios\". El tratamiento de datos de los anuncios está explicado en la Política de Privacidad." },
+      { p: "El Juego muestra anuncios de dos clases:" },
+      { list: [
+        "**Videos con recompensa.** Mirarlos es siempre **opcional**: los elegís vos a cambio de un premio dentro del Juego, nunca se reproducen solos y nunca son obligatorios para avanzar.",
+        "**Anuncios que aparecen solos**, que pueden ser: los de pantalla completa entre partes del Juego, la pausa publicitaria (que siempre podés rechazar) y el que aparece al volver a la app.",
+      ]},
+      { p: "La compra \"Sin anuncios\" —y el pack inicial, que la incluye— elimina los anuncios que aparecen solos. **Los videos con recompensa siguen disponibles**: son opcionales y entregan premios, y la compra no los saca ni los reemplaza. El tratamiento de datos de los anuncios está explicado en la Política de Privacidad." },
     ]},
     { id: "conducta", title: "5. Contenido y conducta", blocks: [
       { p: "El Juego tiene humor argentino, ironía y personajes exagerados. Es ficción: cualquier parecido con personas, empresas u organismos reales es paródico y no constituye una afirmación de hechos ni un consejo de nada —mucho menos financiero, legal, impositivo o de inversión—." },
       { p: "Usá el Juego de buena fe: nada de trampas, exploits, ingeniería inversa de la economía ni intentos de acceder a partes del Juego o de los servicios de Apple que no te correspondan. Sos responsable del uso que hagas del Juego desde tu dispositivo." },
+    ]},
+    { id: "ranking", title: "El ranking y los nombres", blocks: [
+      { p: "Si llegás a Dios, podés entrar al ranking con un nombre, que ven los demás jugadores. El nombre puede tener hasta 15 caracteres (letras, números, espacios y . - _) y no puede ser ofensivo, discriminatorio ni sexual, ni contener datos personales, la marca de otra persona o empresa, ni hacerse pasar por alguien. Lo revisamos con reglas, una lista de palabras y una revisión automática con IA; esa revisión puede equivocarse, y podemos rechazar, cambiar u ocultar cualquier nombre." },
+      { p: "Cualquier jugador puede reportar un nombre desde el ranking. **Un nombre reportado se oculta** (con tres reportes, o antes si lo decidimos nosotros) y la partida deja de mostrarse hasta que se revise. Si usás el ranking para molestar, podemos sacarte de él. Para reportar algo que no se pueda hacer desde el juego, o para pedir que borremos tu nombre, escribinos a **{SUPPORT_EMAIL}**." },
     ]},
     { id: "garantias", title: "6. Sin garantías", blocks: [
       { p: "El Juego se entrega **\"tal cual\" y \"según disponibilidad\"**, sin garantías de ningún tipo, expresas o implícitas. No garantizamos que funcione sin errores ni interrupciones, que sea compatible con todos los dispositivos o versiones de iOS, que tu progreso se conserve, ni que el Juego siga disponible en el futuro." },
@@ -63,7 +72,7 @@ export const termsES: LegalDoc = {
 
 export const termsEN: LegalDoc = {
   title: "Terms of Service — FisuEvolution",
-  updated: "16 August 2026",
+  updated: "6 October 2026",
   summary: "Honest summary: it's a game. It's free. If you buy something, Apple charges you, and what you get are game items, not real money.",
   sections: [
     { id: "acceptance", title: "1. Acceptance", blocks: [
@@ -89,11 +98,20 @@ export const termsEN: LegalDoc = {
       ]},
     ]},
     { id: "ads", title: "4. Ads", blocks: [
-      { p: "If the installed version shows rewarded ads, watching them is always **optional**: they grant temporary bonuses and are never required to progress. You can remove them with the \"No ads\" purchase. How ad data is handled is explained in the Privacy Policy." },
+      { p: "The Game shows two kinds of ads:" },
+      { list: [
+        "**Rewarded videos.** Watching them is always **optional**: you choose to watch one in exchange for an in-game prize; they never play on their own and are never required to progress.",
+        "**Ads that appear on their own**, which may be: full-screen ads between parts of the Game, the ad break (which you can always decline) and the ad shown when you return to the app.",
+      ]},
+      { p: "The \"No ads\" purchase — and the starter pack, which includes it — removes the ads that appear on their own. **Rewarded videos stay available**: they are optional and pay out prizes, and the purchase neither removes nor replaces them. How ad data is handled is explained in the Privacy Policy." },
     ]},
     { id: "conduct", title: "5. Content and conduct", blocks: [
       { p: "The Game runs on Argentine humour, irony and exaggerated characters. It is fiction: any resemblance to real people, companies or institutions is parody and is not a statement of fact or advice of any kind — least of all financial, legal, tax or investment advice." },
       { p: "Play in good faith: no cheating, exploits, reverse engineering of the economy, or attempts to access parts of the Game or of Apple's services you are not entitled to. You are responsible for how the Game is used from your device." },
+    ]},
+    { id: "leaderboard", title: "The leaderboard and names", blocks: [
+      { p: "If you reach God you may enter the leaderboard with a name that other players can see. A name can be up to 15 characters (letters, numbers, spaces and . - _) and may not be offensive, discriminatory or sexual, nor contain personal data or another person's or company's brand, nor impersonate anyone. We check it with rules, a word list and an automated AI check; that check can be wrong, and we may reject, change or hide any name." },
+      { p: "Any player can report a name from the leaderboard. **A reported name is hidden** (after three reports, or earlier if we decide so) and the run stops being shown until it is reviewed. If you use the leaderboard to harass others we may remove you from it. To report something you can't report from the game, or to ask us to delete your name, write to **{SUPPORT_EMAIL}**." },
     ]},
     { id: "warranties", title: "6. No warranties", blocks: [
       { p: "The Game is provided **\"as is\" and \"as available\"**, without warranties of any kind, express or implied. We do not warrant that it will run error-free or uninterrupted, that it is compatible with every device or iOS version, that your progress will be preserved, or that the Game will remain available in the future." },

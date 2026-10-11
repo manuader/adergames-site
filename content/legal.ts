@@ -8,23 +8,34 @@ export type LegalDoc = { title: string; updated: string; summary: string; sectio
 
 export const privacyES: LegalDoc = {
   title: "Política de Privacidad — FisuEvolution",
-  updated: "septiembre de 2026",
-  summary: "Resumen honesto: nosotros no recolectamos tus datos. La publicidad sí procesa algunos, y abajo está exactamente cuáles y cómo los controlás.",
+  updated: "octubre de 2026",
+  summary: "Resumen honesto: no tenemos cuentas ni te pedimos datos personales. La publicidad procesa algunos datos, y el ranking guarda un identificador anónimo y el nombre que vos elegís. Abajo está exactamente cuáles y cómo los controlás.",
   sections: [
     { id: "no-hacemos", title: "Lo que NO hacemos", blocks: [
       { list: [
         "**No tenemos cuentas ni registro.** No pedimos tu email, tu nombre ni ningún dato personal para jugar.",
-        "**No tenemos servidores propios ni analytics de terceros.** Tu progreso se guarda en tu dispositivo.",
+        "**No tenemos analytics de terceros.** Tu progreso se guarda en tu dispositivo. El único servidor propio es el del ranking, que se explica más abajo (alojado en Supabase).",
         "**No vendemos datos** a nadie.",
       ]},
     ]},
     { id: "publicidad", title: "Publicidad", blocks: [
-      { p: "FisuEvolution **muestra publicidad de Google AdMob**. Hay dos tipos:" },
+      { p: "FisuEvolution **muestra publicidad a través de Google AdMob**. Hay dos tipos:" },
       { list: [
         "**Videos con recompensa**, que mirás sólo si querés: los ofrecemos a cambio de premios dentro del juego (duplicar tus ganancias, abrir otro cofre, activar un boost). Nunca se reproducen solos.",
-        "**Anuncios de pantalla completa** entre partes del juego, espaciados y nunca en medio de una acción. La compra **\"Sin anuncios\"** los elimina; los videos con recompensa siguen disponibles, porque son opcionales y entregan premios.",
+        "**Anuncios que aparecen solos**: los de pantalla completa entre partes del juego, la pausa publicitaria (que siempre podés rechazar) y el que aparece al volver a la app. La compra **\"Sin anuncios\"** los elimina; los videos con recompensa siguen disponibles, porque son opcionales y entregan premios.",
       ]},
+    ]},
+    { id: "quienes-procesan", title: "Quiénes procesan tus datos por los anuncios", blocks: [
       { p: "Para mostrarlos, **Google AdMob procesa datos de tu dispositivo** —incluido tu identificador de publicidad (IDFA), la dirección IP y datos técnicos y de uso— según su propia política de privacidad: https://policies.google.com/privacy" },
+      { p: "AdMob también hace competir por cada anuncio a otras redes publicitarias (mediación, por puja o bidding). En esta versión son dos, y cada una procesa datos de tu dispositivo —el identificador de publicidad, la IP y datos técnicos y de uso— según su propia política:" },
+      { list: [
+        "**Unity Ads** (Unity Technologies): https://unity.com/legal/privacy-policy",
+        "**Meta Audience Network** (Meta Platforms): https://www.facebook.com/privacy/policy/",
+      ]},
+      { p: "No trabajamos con otras redes. Ninguna de estas empresas recibe de nosotros tu nombre del ranking, el identificador de tu instalación ni tus tiempos de partida." },
+    ]},
+    { id: "config-anuncios", title: "Configuración de anuncios", blocks: [
+      { p: "La app baja de nuestro sitio un archivo de configuración de anuncios (/config/ads.json). **No manda ningún dato tuyo**, pero como cualquier pedido web, el proveedor del sitio (Vercel) ve la dirección IP desde la que se pide." },
     ]},
     { id: "control", title: "Vos controlás si es personalizada", blocks: [
       { p: "La primera vez que abrís el juego, iOS te muestra el diálogo de **App Tracking Transparency** preguntando si permitís el seguimiento." },
@@ -33,7 +44,19 @@ export const privacyES: LegalDoc = {
         "**Si rechazás**, **los anuncios se siguen viendo igual, sólo que sin personalizar**. No perdés nada del juego.",
       ]},
       { p: "Podés cambiar esta decisión cuando quieras en **Ajustes → Privacidad y seguridad → Rastreo**." },
-      { p: "En la Unión Europea, el Reino Unido y Suiza, además te mostramos el formulario de consentimiento de Google (UMP) antes de servir cualquier anuncio, y podés revisar tu elección desde los ajustes del juego." },
+      { p: "En la Unión Europea, el Reino Unido y Suiza, además te mostramos el formulario de consentimiento de Google (UMP) antes de servir cualquier anuncio, y podés revisar tu elección desde **Ajustes → Opciones de privacidad**." },
+    ]},
+    { id: "ranking", title: "El ranking de la llegada a Dios", blocks: [
+      { p: "Si llegás a Dios, podés **entrar al ranking** con un nombre. Es opcional: si no entrás, tu partida no se publica. Para que funcione guardamos en nuestro servidor:" },
+      { list: [
+        "**Un identificador anónimo de tu instalación**, que generamos al azar y que no está ligado a tu identidad, a tu cuenta de Apple ni a tu identificador de publicidad. Sirve para saber qué partidas son tuyas y para limitar abusos.",
+        "**El nombre que elegiste** y tus **tiempos de partida**, que se muestran a los demás jugadores.",
+      ]},
+      { p: "No los usamos para seguirte ni los vinculamos con tu identidad, y no los compartimos con anunciantes. Los nombres pasan por reglas, una lista de palabras y una revisión automática con IA antes de mostrarse; no pongas datos personales en el nombre." },
+    ]},
+    { id: "revision-ia", title: "Quién hace la revisión con IA", blocks: [
+      { p: "La revisión automática la hace **Anthropic** con su modelo **Claude**, a pedido de nuestro servidor. Le mandamos **sólo el nombre que elegiste** (el texto, hasta 15 caracteres): no le mandamos el identificador de tu instalación, tus tiempos, tu identificador de publicidad ni ningún dato de tu dispositivo. Anthropic la procesa según su propia política de privacidad: https://www.anthropic.com/legal/privacy. Cualquier jugador puede **reportar** un nombre, y un nombre reportado se oculta. Si querés que borremos tu nombre o tus partidas del ranking, escribinos al contacto de abajo con tu nombre y lo hacemos." },
+      { p: "Los datos del ranking viven en un servidor propio, alojado en **Supabase**, que los guarda por cuenta nuestra. Es el único dato tuyo que sale del dispositivo hacia nosotros, y sólo si entrás al ranking." },
     ]},
     { id: "compras", title: "Compras dentro de la app", blocks: [
       { p: "Las procesa **Apple**. Nosotros no vemos ni guardamos datos de tu tarjeta ni de tu método de pago — sólo recibimos de Apple la confirmación de qué compraste, para entregártelo." },
@@ -52,23 +75,34 @@ export const privacyES: LegalDoc = {
 
 export const privacyEN: LegalDoc = {
   title: "Privacy Policy — HoboEvolution",
-  updated: "September 2026",
-  summary: "Honest summary: we don't collect your data. The ads do process some, and below is exactly which and how you control them.",
+  updated: "October 2026",
+  summary: "Honest summary: we have no accounts and ask for no personal data. The ads process some data, and the leaderboard stores an anonymous identifier and the name you choose. Below is exactly which and how you control them.",
   sections: [
     { id: "dont", title: "What we do NOT do", blocks: [
       { list: [
         "**No accounts, no sign-up.** We never ask for your email, your name or any personal data to play.",
-        "**No servers of our own and no third-party analytics.** Your progress stays on your device.",
+        "**No third-party analytics.** Your progress stays on your device. Our only server is the leaderboard's, explained below (hosted on Supabase).",
         "**We never sell data** to anyone.",
       ]},
     ]},
     { id: "ads", title: "Advertising", blocks: [
-      { p: "HoboEvolution **shows Google AdMob ads**. There are two kinds:" },
+      { p: "HoboEvolution **shows ads through Google AdMob**. There are two kinds:" },
       { list: [
         "**Opt-in rewarded videos** you choose to watch for in-game prizes (double your earnings, open another chest, activate a boost). They never play on their own.",
-        "**Full-screen ads** between parts of the game, spaced out and never in the middle of an action. The **\"No Ads\"** purchase removes them; rewarded videos stay, since they are optional and pay out.",
+        "**Ads that appear on their own**: full-screen ads between parts of the game, an ad break you can always decline, and one when you return to the app. The **\"No Ads\"** purchase removes them; rewarded videos stay, since they are optional and pay out.",
       ]},
+    ]},
+    { id: "who-processes", title: "Who processes your data for ads", blocks: [
       { p: "To serve them, **Google AdMob processes device data** — including your advertising identifier (IDFA), IP address and technical/usage data — under its own privacy policy: https://policies.google.com/privacy" },
+      { p: "AdMob also has other ad networks bid for each ad (mediation). In this version there are two, and each processes the same kind of device data — advertising identifier, IP address and technical/usage data — under its own policy:" },
+      { list: [
+        "**Unity Ads** (Unity Technologies): https://unity.com/legal/privacy-policy",
+        "**Meta Audience Network** (Meta Platforms): https://www.facebook.com/privacy/policy/",
+      ]},
+      { p: "We work with no other networks, and none of these companies receives your leaderboard name, install identifier or run times from us." },
+    ]},
+    { id: "ads-config", title: "Ads configuration", blocks: [
+      { p: "The app downloads an ads configuration file from our website (/config/ads.json). It **sends none of your data**, but like any web request the site's host (Vercel) sees the IP address it comes from." },
     ]},
     { id: "control", title: "You control whether ads are personalized", blocks: [
       { p: "On first launch, iOS shows you the **App Tracking Transparency** prompt asking whether you allow tracking." },
@@ -77,7 +111,19 @@ export const privacyEN: LegalDoc = {
         "**If you decline**, **you still get ads, just non-personalized**. You lose nothing in the game.",
       ]},
       { p: "You can change this any time in **Settings → Privacy & Security → Tracking**." },
-      { p: "In the EU, the UK and Switzerland we also show Google's consent form (UMP) before serving any ad, and you can review your choice from the game's settings." },
+      { p: "In the EU, the UK and Switzerland we also show Google's consent form (UMP) before serving any ad, and you can review your choice in **Settings → Privacy options**." },
+    ]},
+    { id: "leaderboard", title: "The reach-God leaderboard", blocks: [
+      { p: "If you reach God you may **enter the leaderboard** with a name. It is optional: if you don't, your run is not published. For it to work we store on our server:" },
+      { list: [
+        "**A random anonymous install identifier**, not tied to your identity, your Apple account or your advertising identifier. It tells us which runs are yours and limits abuse.",
+        "**The name you chose** and your **run times**, which other players can see.",
+      ]},
+      { p: "We don't use them to track you, don't link them to your identity and don't share them with advertisers. Names go through rules, a word list and an automated AI check before being shown; don't put personal data in your name." },
+    ]},
+    { id: "ai-check", title: "Who does the AI check", blocks: [
+      { p: "The automated check is done by **Anthropic** with its **Claude** model, at our server's request. We send **only the name you chose** (the text, up to 15 characters): never your install identifier, run times, advertising identifier or any device data. Anthropic processes it under its own privacy policy: https://www.anthropic.com/legal/privacy. Any player can **report** a name, and a reported name is hidden. To have your name or runs removed from the leaderboard, email us at the contact below with your name and we will do it." },
+      { p: "The leaderboard data lives on our own server, hosted on **Supabase**, which stores it on our behalf. It is the only data of yours that leaves your device to reach us, and only if you enter the leaderboard." },
     ]},
     { id: "purchases", title: "In-app purchases", blocks: [
       { p: "Handled by **Apple**. We never see or store your card or payment details — Apple only tells us what you bought, so we can deliver it." },
