@@ -2,7 +2,7 @@ import type { LegalDoc } from "./legal";
 
 export const termsES: LegalDoc = {
   title: "Términos de Servicio — FisuEvolution",
-  updated: "6 de octubre de 2026",
+  updated: "13 de octubre de 2026",
   summary: "Resumen honesto: es un juego. Es gratis. Si comprás algo, lo cobra Apple y lo que comprás son objetos de un juego, no plata de verdad.",
   sections: [
     { id: "aceptacion", title: "1. Aceptación", blocks: [
@@ -41,7 +41,9 @@ export const termsES: LegalDoc = {
     ]},
     { id: "ranking", title: "El ranking y los nombres", blocks: [
       { p: "Si llegás a Dios, podés entrar al ranking con un nombre, que ven los demás jugadores. El nombre puede tener hasta 15 caracteres (letras, números, espacios y . - _) y no puede ser ofensivo, discriminatorio ni sexual, ni contener datos personales, la marca de otra persona o empresa, ni hacerse pasar por alguien. Lo revisamos con reglas, una lista de palabras y una revisión automática con IA; esa revisión puede equivocarse, y podemos rechazar, cambiar u ocultar cualquier nombre." },
-      { p: "Cualquier jugador puede reportar un nombre desde el ranking. **Un nombre reportado se oculta** (con tres reportes, o antes si lo decidimos nosotros) y la partida deja de mostrarse hasta que se revise. Si usás el ranking para molestar, podemos sacarte de él. Para reportar algo que no se pueda hacer desde el juego, o para pedir que borremos tu nombre, escribinos a **{SUPPORT_EMAIL}**." },
+      { p: "**Al publicar tu nombre aceptás estos Términos.** El juego te lo recuerda justo antes de publicar, con un enlace para leerlos. **Tolerancia cero:** no hay lugar en el ranking para nombres ofensivos, abusivos o que acosen a otras personas, y quien los use pierde su lugar en el ranking." },
+      { p: "Cualquier jugador puede reportar un nombre desde el ranking (con un toque largo sobre la fila). **Un nombre reportado se oculta** (con tres reportes, o antes si lo decidimos nosotros) y la partida deja de mostrarse hasta que se revise. Actuamos sobre los reportes dentro de las 24 horas y, si el nombre infringe estos Términos, lo sacamos del ranking. Si usás el ranking para molestar, podemos sacarte de él." },
+      { p: "También podés **bloquear** un nombre: con un toque largo sobre la fila, \"No ver más este nombre\" lo oculta sólo para vos. El bloqueo se guarda en tu dispositivo y no se lo avisamos a nadie. Para reportar algo que no se pueda hacer desde el juego, o para pedir que borremos tu nombre, escribinos a **{SUPPORT_EMAIL}**." },
     ]},
     { id: "garantias", title: "6. Sin garantías", blocks: [
       { p: "El Juego se entrega **\"tal cual\" y \"según disponibilidad\"**, sin garantías de ningún tipo, expresas o implícitas. No garantizamos que funcione sin errores ni interrupciones, que sea compatible con todos los dispositivos o versiones de iOS, que tu progreso se conserve, ni que el Juego siga disponible en el futuro." },
@@ -72,7 +74,7 @@ export const termsES: LegalDoc = {
 
 export const termsEN: LegalDoc = {
   title: "Terms of Service — FisuEvolution",
-  updated: "6 October 2026",
+  updated: "13 October 2026",
   summary: "Honest summary: it's a game. It's free. If you buy something, Apple charges you, and what you get are game items, not real money.",
   sections: [
     { id: "acceptance", title: "1. Acceptance", blocks: [
@@ -111,7 +113,9 @@ export const termsEN: LegalDoc = {
     ]},
     { id: "leaderboard", title: "The leaderboard and names", blocks: [
       { p: "If you reach God you may enter the leaderboard with a name that other players can see. A name can be up to 15 characters (letters, numbers, spaces and . - _) and may not be offensive, discriminatory or sexual, nor contain personal data or another person's or company's brand, nor impersonate anyone. We check it with rules, a word list and an automated AI check; that check can be wrong, and we may reject, change or hide any name." },
-      { p: "Any player can report a name from the leaderboard. **A reported name is hidden** (after three reports, or earlier if we decide so) and the run stops being shown until it is reviewed. If you use the leaderboard to harass others we may remove you from it. To report something you can't report from the game, or to ask us to delete your name, write to **{SUPPORT_EMAIL}**." },
+      { p: "**By publishing your name you accept these Terms.** The game reminds you right before you publish, with a link to read them. **Zero tolerance:** there is no place on the leaderboard for offensive or abusive names, or names that harass other people, and anyone who uses them loses their place on the leaderboard." },
+      { p: "Any player can report a name from the leaderboard (long-press the row). **A reported name is hidden** (after three reports, or earlier if we decide so) and the run stops being shown until it is reviewed. We act on reports within 24 hours and, if the name breaks these Terms, we remove it from the leaderboard. If you use the leaderboard to harass others we may remove you from it." },
+      { p: "You can also **block** a name: long-press the row and choose \"Hide this name\" to hide it for you only. The block is stored on your device and we don't tell anyone. To report something you can't report from the game, or to ask us to delete your name, write to **{SUPPORT_EMAIL}**." },
     ]},
     { id: "warranties", title: "6. No warranties", blocks: [
       { p: "The Game is provided **\"as is\" and \"as available\"**, without warranties of any kind, express or implied. We do not warrant that it will run error-free or uninterrupted, that it is compatible with every device or iOS version, that your progress will be preserved, or that the Game will remain available in the future." },
