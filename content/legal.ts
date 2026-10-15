@@ -9,12 +9,12 @@ export type LegalDoc = { title: string; updated: string; summary: string; sectio
 export const privacyES: LegalDoc = {
   title: "Política de Privacidad — FisuEvolution",
   updated: "octubre de 2026",
-  summary: "Resumen honesto: no tenemos cuentas ni te pedimos datos personales. La publicidad procesa algunos datos, y el ranking guarda un identificador anónimo y el nombre que vos elegís. Abajo está exactamente cuáles y cómo los controlás.",
+  summary: "Resumen honesto: no tenemos cuentas ni te pedimos datos personales. La publicidad procesa algunos datos, el ranking guarda un identificador anónimo y el nombre que vos elegís, y el juego nos manda estadísticas de uso, con un identificador al azar propio de ellas, para saber cómo se juega y cuánto rinden los anuncios. Abajo está exactamente cuáles y cómo los controlás.",
   sections: [
     { id: "no-hacemos", title: "Lo que NO hacemos", blocks: [
       { list: [
         "**No tenemos cuentas ni registro.** No pedimos tu email, tu nombre ni ningún dato personal para jugar.",
-        "**No tenemos analytics de terceros.** Tu progreso se guarda en tu dispositivo. El único servidor propio es el del ranking, que se explica más abajo (alojado en Supabase).",
+        "**No tenemos analytics de terceros.** Tu progreso se guarda en tu dispositivo. Tenemos un solo servidor propio, alojado en Supabase: guarda el ranking y las estadísticas de uso, que se explican más abajo.",
         "**No vendemos datos** a nadie.",
       ]},
     ]},
@@ -56,10 +56,22 @@ export const privacyES: LegalDoc = {
     ]},
     { id: "revision-ia", title: "Quién hace la revisión con IA", blocks: [
       { p: "La revisión automática la hace **Anthropic** con su modelo **Claude**, a pedido de nuestro servidor. Le mandamos **sólo el nombre que elegiste** (el texto, hasta 15 caracteres): no le mandamos el identificador de tu instalación, tus tiempos, tu identificador de publicidad ni ningún dato de tu dispositivo. Anthropic la procesa según su propia política de privacidad: https://www.anthropic.com/legal/privacy. Cualquier jugador puede **reportar** un nombre, y un nombre reportado se oculta. Si bloqueás un nombre (\"No ver más este nombre\"), esa decisión se guarda **sólo en tu dispositivo** y no sale de él. Si querés que borremos tu nombre o tus partidas del ranking, escribinos al contacto de abajo con tu nombre y lo hacemos." },
-      { p: "Los datos del ranking viven en un servidor propio, alojado en **Supabase**, que los guarda por cuenta nuestra. Es el único dato tuyo que sale del dispositivo hacia nosotros, y sólo si entrás al ranking." },
+      { p: "Los datos del ranking viven en nuestro servidor, alojado en **Supabase**, que los guarda por cuenta nuestra, y salen de tu dispositivo sólo si entrás al ranking. Lo otro que nos llega son las estadísticas de uso de la sección siguiente." },
+    ]},
+    { id: "estadisticas", title: "Estadísticas de uso", blocks: [
+      { p: "Para entender cómo se juega y cuánto rinde cada anuncio, el juego le manda a nuestro servidor mensajes cortos sobre lo que pasa en la partida. Cada uno lleva:" },
+      { list: [
+        "**Qué pasó:** que empezó o terminó una sesión de juego (cuánto duró y cuántas sesiones llevás); que se vio un anuncio (de qué tipo, en qué lugar del juego, qué red lo sirvió y cuánto pagó por esa vista, en su moneda); qué pasó con una oferta de video (si apareció, si la tocaste, si te ganaste el premio, si no había video o si la dejaste pasar); qué producto compraste (sólo cuál: ni el precio ni los datos de la compra); y cuántas veces reencarnaste.",
+        "**Datos técnicos:** la versión del juego y de iOS, el modelo de tu iPhone o iPad (por ejemplo, \"iPhone16,2\") y el país de tu App Store.",
+        "**Un identificador al azar, propio de estas estadísticas.** No es el del ranking ni se comparte con él, y no está ligado a tu nombre, a tu cuenta de Apple ni a tu identificador de publicidad. Sigue siendo el mismo si reinstalás el juego en el mismo dispositivo y no pasa a tus otros dispositivos (ni por iCloud ni al restaurar una copia de seguridad en otro teléfono). Además, un identificador de sesión nuevo cada vez que abrís el juego y la hora de tu teléfono.",
+      ]},
+      { p: "Lo que **no** llevan: tu identificador de publicidad (IDFA), el identificador de proveedor de iOS (IDFV), tu nombre del ranking, texto que hayas escrito, ni datos de tu cuenta de Apple o de tu pago. No las cruzamos con tu nombre del ranking ni con nada que te identifique, no las usamos para mostrarte publicidad ni para seguirte por otras apps o sitios, no se las pasamos a las redes de anuncios y no las vendemos." },
+      { p: "Como cualquier pedido web, el proveedor del servidor (Supabase) ve la dirección IP desde la que llega cada envío —del ranking o de estas estadísticas— y la anota en sus registros técnicos por unos pocos días. Nosotros no la guardamos junto a las estadísticas, no la usamos para identificarte y no la cruzamos con ellas." },
+      { p: "Las estadísticas se guardan en Supabase por cuenta nuestra y **se borran solas a los 400 días** (un año y un mes, para comparar cada mes con el mismo del año anterior). Si estás sin conexión, esperan en tu dispositivo —como mucho, las últimas 1.000 y hasta un mes— hasta que haya red." },
+      { p: "**Cómo se apagan.** En la Unión Europea, el Reino Unido y Suiza se mandan sólo si en el formulario de consentimiento de Google aceptaste que se guarde información en tu dispositivo y que se use para medir, hacer estadísticas y mejorar el servicio. Podés cambiar tu elección cuando quieras en **Ajustes → Opciones de privacidad**: si la retirás, dejan de mandarse y lo que estaba esperando en tu dispositivo se borra sin salir de él. Fuera de la UE, el Reino Unido y Suiza el juego no tiene un interruptor para esto; las Opciones de privacidad, donde aparezcan, controlan los anuncios. No dependen del permiso de seguimiento de iOS (App Tracking Transparency) porque no son seguimiento: no se cruzan con datos de otras empresas." },
     ]},
     { id: "compras", title: "Compras dentro de la app", blocks: [
-      { p: "Las procesa **Apple**. Nosotros no vemos ni guardamos datos de tu tarjeta ni de tu método de pago — sólo recibimos de Apple la confirmación de qué compraste, para entregártelo." },
+      { p: "Las procesa **Apple**. Nosotros no vemos ni guardamos datos de tu tarjeta ni de tu método de pago — sólo recibimos de Apple la confirmación de qué compraste, para entregártelo. Qué producto compraste (sin el precio) también va en las estadísticas de uso." },
     ]},
     { id: "progreso", title: "Tu progreso de juego", blocks: [
       { p: "Se guarda **en tu dispositivo**. Si en alguna versión futura activamos el guardado en iCloud, iría a **tu** base de datos privada de iCloud, a la que no tenemos acceso, y lo diríamos acá antes de hacerlo." },
@@ -76,12 +88,12 @@ export const privacyES: LegalDoc = {
 export const privacyEN: LegalDoc = {
   title: "Privacy Policy — HoboEvolution",
   updated: "October 2026",
-  summary: "Honest summary: we have no accounts and ask for no personal data. The ads process some data, and the leaderboard stores an anonymous identifier and the name you choose. Below is exactly which and how you control them.",
+  summary: "Honest summary: we have no accounts and ask for no personal data. The ads process some data, the leaderboard stores an anonymous identifier and the name you choose, and the game sends us usage statistics, under a random identifier of their own, to see how it is played and what the ads earn. Below is exactly which and how you control them.",
   sections: [
     { id: "dont", title: "What we do NOT do", blocks: [
       { list: [
         "**No accounts, no sign-up.** We never ask for your email, your name or any personal data to play.",
-        "**No third-party analytics.** Your progress stays on your device. Our only server is the leaderboard's, explained below (hosted on Supabase).",
+        "**No third-party analytics.** Your progress stays on your device. We have a single server of our own, hosted on Supabase: it holds the leaderboard and the usage statistics, both explained below.",
         "**We never sell data** to anyone.",
       ]},
     ]},
@@ -123,10 +135,22 @@ export const privacyEN: LegalDoc = {
     ]},
     { id: "ai-check", title: "Who does the AI check", blocks: [
       { p: "The automated check is done by **Anthropic** with its **Claude** model, at our server's request. We send **only the name you chose** (the text, up to 15 characters): never your install identifier, run times, advertising identifier or any device data. Anthropic processes it under its own privacy policy: https://www.anthropic.com/legal/privacy. Any player can **report** a name, and a reported name is hidden. If you block a name (\"Hide this name\"), that choice is stored only on your device and never leaves it. To have your name or runs removed from the leaderboard, email us at the contact below with your name and we will do it." },
-      { p: "The leaderboard data lives on our own server, hosted on **Supabase**, which stores it on our behalf. It is the only data of yours that leaves your device to reach us, and only if you enter the leaderboard." },
+      { p: "The leaderboard data lives on our server, hosted on **Supabase**, which stores it on our behalf, and it leaves your device only if you enter the leaderboard. The only other thing that reaches us is the usage statistics in the next section." },
+    ]},
+    { id: "usage-stats", title: "Usage statistics", blocks: [
+      { p: "To understand how the game is played and what each ad earns, the game sends our server short messages about what happens in play. Each one carries:" },
+      { list: [
+        "**What happened:** a play session started or ended (how long it lasted and how many sessions you've played); an ad was shown (its format, the place in the game, the network that served it and what it paid for that view, in its currency); what happened to a rewarded-video offer (shown, tapped, rewarded, no video available, or passed); which product you bought (only which one: never the price or payment details); and how many times you reincarnated.",
+        "**Technical data:** the app and iOS version, your iPhone or iPad model (e.g. \"iPhone16,2\") and your App Store country.",
+        "**A random identifier of their own.** It is not the leaderboard's and is not shared with it, and it is not tied to your name, your Apple account or your advertising identifier. It stays the same if you reinstall on the same device and never moves to your other devices (not through iCloud, and not by restoring a backup to another phone). Plus a new session identifier each time you open the game, and your phone's time.",
+      ]},
+      { p: "What they do **not** carry: your advertising identifier (IDFA), the iOS vendor identifier (IDFV), your leaderboard name, anything you typed, or your Apple account or payment data. We don't combine them with your leaderboard name or anything that identifies you, don't use them to show you ads or to track you across other apps or websites, don't share them with ad networks and never sell them." },
+      { p: "Like any web request, the server's host (Supabase) sees the IP address each request comes from — leaderboard or statistics — and keeps it in its technical logs for a few days. We don't store it with the statistics, don't use it to identify you and don't combine it with them." },
+      { p: "The statistics are stored on Supabase on our behalf and **deleted automatically after 400 days** (a year and a month, to compare each month with the same one a year earlier). While you are offline they wait on your device — at most the latest 1,000, for up to a month — until there is a connection." },
+      { p: "**How to turn them off.** In the EU, the UK and Switzerland they are sent only if, in Google's consent form, you agreed to storing information on your device and to using it for measurement, statistics and improving the service. You can change your choice any time in **Settings → Privacy options**: withdraw it and they stop, and whatever was waiting on your device is deleted without leaving it. Outside the EU, the UK and Switzerland the game has no switch for this; Privacy options, where they appear, control the ads. They don't depend on iOS App Tracking Transparency because they are not tracking: they are never combined with other companies' data." },
     ]},
     { id: "purchases", title: "In-app purchases", blocks: [
-      { p: "Handled by **Apple**. We never see or store your card or payment details — Apple only tells us what you bought, so we can deliver it." },
+      { p: "Handled by **Apple**. We never see or store your card or payment details — Apple only tells us what you bought, so we can deliver it. Which product you bought (without the price) is also part of the usage statistics." },
     ]},
     { id: "progress", title: "Your game progress", blocks: [
       { p: "It stays **on your device**. If a future version enables iCloud saving, it would go to **your** private iCloud database, which we cannot access, and we would say so here before doing it." },
