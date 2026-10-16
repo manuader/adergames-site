@@ -27,10 +27,9 @@ export const privacyES: LegalDoc = {
     ]},
     { id: "quienes-procesan", title: "Quiénes procesan tus datos por los anuncios", blocks: [
       { p: "Para mostrarlos, **Google AdMob procesa datos de tu dispositivo** —incluido tu identificador de publicidad (IDFA), la dirección IP y datos técnicos y de uso— según su propia política de privacidad: https://policies.google.com/privacy" },
-      { p: "AdMob también hace competir por cada anuncio a otras redes publicitarias (mediación, por puja o bidding). En esta versión son dos, y cada una procesa datos de tu dispositivo —el identificador de publicidad, la IP y datos técnicos y de uso— según su propia política:" },
+      { p: "AdMob también hace competir por cada anuncio a otra red publicitaria (mediación, por puja o bidding). En esta versión es una sola, y procesa datos de tu dispositivo —el identificador de publicidad, la IP y datos técnicos y de uso— según su propia política:" },
       { list: [
         "**Unity Ads** (Unity Technologies): https://unity.com/legal/privacy-policy",
-        "**Meta Audience Network** (Meta Platforms): https://www.facebook.com/privacy/policy/",
       ]},
       { p: "No trabajamos con otras redes. Ninguna de estas empresas recibe de nosotros tu nombre del ranking, el identificador de tu instalación ni tus tiempos de partida." },
     ]},
@@ -106,10 +105,9 @@ export const privacyEN: LegalDoc = {
     ]},
     { id: "who-processes", title: "Who processes your data for ads", blocks: [
       { p: "To serve them, **Google AdMob processes device data** — including your advertising identifier (IDFA), IP address and technical/usage data — under its own privacy policy: https://policies.google.com/privacy" },
-      { p: "AdMob also has other ad networks bid for each ad (mediation). In this version there are two, and each processes the same kind of device data — advertising identifier, IP address and technical/usage data — under its own policy:" },
+      { p: "AdMob also has another ad network bid for each ad (mediation). In this version there is only one, and it processes the same kind of device data — advertising identifier, IP address and technical/usage data — under its own policy:" },
       { list: [
         "**Unity Ads** (Unity Technologies): https://unity.com/legal/privacy-policy",
-        "**Meta Audience Network** (Meta Platforms): https://www.facebook.com/privacy/policy/",
       ]},
       { p: "We work with no other networks, and none of these companies receives your leaderboard name, install identifier or run times from us." },
     ]},
